@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask WIG;
+
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +40,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+        }
+        if (Input.GetKey(KeyCode.Space) && isJumping == true)
+        {
+            if(jumpTimeCounter > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else { isJumping = false; }
+            
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
     }
 
