@@ -19,5 +19,5 @@ public class CameraFollow : MonoBehaviour
         transform.position = smoothPos;
     }
 
-    
+
 }
