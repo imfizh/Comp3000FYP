@@ -13,11 +13,12 @@ public class CameraRaycast : MonoBehaviour
         Debug.DrawRay(transform.position, direction.normalized * length, Color.red);
 
         LayerMask mask = LayerMask.GetMask("Background");
-        RaycastHit2D currentHit = Physics2D.Raycast(transform.position, direction, length, mask);
+        //RaycastHit2D currentHit = Physics2D.Raycast(transform.position, direction, length, mask);
         //RaycastHit2D currentHit = Physics2D.Raycast(transform.position, direction, length);
-        if (currentHit.collider != null)
+        RaycastHit currentHit;
+        if (Physics.Raycast(transform.position, direction, out currentHit, length, LayerMask.GetMask("Background")))
+        //if (currentHit.collider != null)
         {
-            Debug.Log("You hit: " + currentHit.collider.gameObject.name);
             AlphaWalls AW = currentHit.transform.GetComponent<AlphaWalls>();
             if (AW)
             {
