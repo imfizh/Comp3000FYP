@@ -17,14 +17,22 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == sPos.position)
+        if (this.gameObject.tag == "Platform")
         {
-            nextPos = ePos.position;
+            MoveOnX();
         }
-        if (transform.position == ePos.position)
-        {
-            nextPos = sPos.position;
-        }
-        transform.position = Vector3.MoveTowards(transform.position,nextPos,speed*Time.deltaTime);
     }
+    public void MoveOnX()
+    {
+            if (transform.position == sPos.position)
+            {
+                nextPos = ePos.position;
+            }
+            if (transform.position == ePos.position)
+            {
+                nextPos = sPos.position;
+            }
+            transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+    }
+    
 }
