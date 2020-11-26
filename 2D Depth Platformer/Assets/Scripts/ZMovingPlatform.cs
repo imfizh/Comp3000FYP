@@ -29,11 +29,25 @@ public class ZMovingPlatform : MonoBehaviour
         if (elapsed >= 2f)
         {
             elapsed = elapsed % 2f;
-            transform.position = nextPos;
+            Move();
         }
     }
     void Move()
     {
         transform.position = nextPos;
+        if(nextPos == ePos.position)
+        {
+            Vector3 lTemp = transform.localScale;
+            lTemp.x = lTemp.x / 2;
+            lTemp.y = lTemp.y / 2;
+            transform.localScale = lTemp;
+        }
+        if (nextPos == sPos.position)
+        {
+            Vector3 lTemp = transform.localScale;
+            lTemp.x = lTemp.x * 2;
+            lTemp.y = lTemp.y * 2;
+            transform.localScale = lTemp;
+        }
     }
 }
