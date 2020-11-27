@@ -35,6 +35,20 @@ public class ZMovingPlatform : MonoBehaviour
     void Move()
     {
         transform.position = nextPos;
+        if (nextPos == ePos.position)
+        {
+            //GameObject go = GameObject.Find("testMovingPlatformZ");
+            GameObject go = this.gameObject;
+            LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
+            other.BackLayer();
+        }
+        if (nextPos == sPos.position)
+        {
+            //GameObject go = GameObject.Find("testMovingPlatformZ");
+            GameObject go = this.gameObject;
+            LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
+            other.MainLayer();
+        }
         // Code for if using orthographic camera to change size of platform, gives it a shrink effect
         //if (nextPos == ePos.position)
         //{
