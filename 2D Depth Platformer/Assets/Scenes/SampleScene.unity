@@ -1499,6 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layer: 0
+  currentLayer: 0
 --- !u!1 &606701175
 GameObject:
   m_ObjectHideFlags: 0

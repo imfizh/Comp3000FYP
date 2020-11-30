@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        if(faceR == false && moveInput > 0)
+        if (faceR == false && moveInput > 0)
         {
             Flip();
         }else if(faceR == true && moveInput <0)

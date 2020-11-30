@@ -37,17 +37,19 @@ public class ZMovingPlatform : MonoBehaviour
         transform.position = nextPos;
         if (nextPos == ePos.position)
         {
-            //GameObject go = GameObject.Find("testMovingPlatformZ");
             GameObject go = this.gameObject;
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.BackLayer();
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (nextPos == sPos.position)
         {
-            //GameObject go = GameObject.Find("testMovingPlatformZ");
             GameObject go = this.gameObject;
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.MainLayer();
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         // Code for if using orthographic camera to change size of platform, gives it a shrink effect
         //if (nextPos == ePos.position)
