@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        LayerInteract();
 
         if (faceR == false && moveInput > 0)
         {
@@ -69,5 +70,18 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Scalar = transform.localScale;
         Scalar.x *= -1;
         transform.localScale = Scalar;
+    }
+    void LayerInteract()
+    {
+        if (this.gameObject.layer.Equals(10))
+        {
+            Physics2D.IgnoreLayerCollision(10, 13, true);
+            Physics2D.IgnoreLayerCollision(14, 12, false);
+        }
+        if (this.gameObject.layer.Equals(14))
+        {
+            Physics2D.IgnoreLayerCollision(10, 13, false);
+            Physics2D.IgnoreLayerCollision(14, 12, true);
+        }
     }
 }
