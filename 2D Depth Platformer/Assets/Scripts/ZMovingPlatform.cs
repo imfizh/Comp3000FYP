@@ -40,7 +40,10 @@ public class ZMovingPlatform : MonoBehaviour
             GameObject go = this.gameObject;
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.BackLayer();
-            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            //this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            this.gameObject.layer=13;
+            Physics2D.IgnoreLayerCollision(10, 13, true);
+            Physics2D.IgnoreLayerCollision(14, 12, false);
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (nextPos == sPos.position)
@@ -48,7 +51,10 @@ public class ZMovingPlatform : MonoBehaviour
             GameObject go = this.gameObject;
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.MainLayer();
-            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            //this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            this.gameObject.layer =12;
+            Physics2D.IgnoreLayerCollision(10, 13, false);
+            Physics2D.IgnoreLayerCollision(14, 12, true);
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         // Code for if using orthographic camera to change size of platform, gives it a shrink effect

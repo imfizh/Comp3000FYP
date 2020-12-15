@@ -221,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23630859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.32, y: -0.27, z: 0}
+  m_LocalPosition: {x: 5.85, y: -0.27, z: 0}
   m_LocalScale: {x: 0.599, y: 0.39526403, z: 1}
   m_Children: []
   m_Father: {fileID: 1642830410}
@@ -1468,7 +1468,7 @@ GameObject:
   - component: {fileID: 581622366}
   - component: {fileID: 581622368}
   - component: {fileID: 581622371}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: testMovingPlatformZ
   m_TagString: Platform Z
   m_Icon: {fileID: 0}
