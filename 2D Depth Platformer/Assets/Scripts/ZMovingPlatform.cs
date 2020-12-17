@@ -8,6 +8,7 @@ public class ZMovingPlatform : MonoBehaviour
     public Transform StartPos;
     Vector3 nextPos;
     float elapsed = 0f;
+    bool onPlatform=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +42,11 @@ public class ZMovingPlatform : MonoBehaviour
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.BackLayer();
             //this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            if (onPlatform==true)
+            {
+                GameObject.Find("mc").layer = 14;
+            }
             this.gameObject.layer=13;
-            Physics2D.IgnoreLayerCollision(10, 13, true);
-            Physics2D.IgnoreLayerCollision(14, 12, false);
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (nextPos == sPos.position)
@@ -52,9 +55,11 @@ public class ZMovingPlatform : MonoBehaviour
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
             other.MainLayer();
             //this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            if (onPlatform == true)
+            {
+                GameObject.Find("mc").layer = 10;
+            }
             this.gameObject.layer =12;
-            Physics2D.IgnoreLayerCollision(10, 13, false);
-            Physics2D.IgnoreLayerCollision(14, 12, true);
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         // Code for if using orthographic camera to change size of platform, gives it a shrink effect
@@ -72,5 +77,21 @@ public class ZMovingPlatform : MonoBehaviour
         //    lTemp.y = lTemp.y * 2;
         //    this.transform.localScale = lTemp;
         //}
+    }
+    void ChangePlayerLayerBack()
+    {
+        GameObject.Find("mc").layer = 14;
+    }
+    void ChangePlayerLayerMain()
+    {
+        GameObject.Find("mc").layer = 10;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        onPlatform = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        onPlatform = false;
     }
 }
