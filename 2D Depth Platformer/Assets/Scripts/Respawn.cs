@@ -11,6 +11,10 @@ public class Respawn : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            if (GameObject.Find("mc").layer ==14)
+            {
+                GameObject.Find("mc").layer = 10;
+            }
             player.transform.position = respawn1.transform.position;
         }
     }
