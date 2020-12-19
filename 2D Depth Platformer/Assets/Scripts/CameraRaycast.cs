@@ -5,10 +5,14 @@ using UnityEngine;
 public class CameraRaycast : MonoBehaviour
 {
     public Transform player;
+    public Transform feet;
+    public Transform head;
     private AlphaWalls currentTransparentWall;
     private void FixedUpdate()
     {
         Vector3 direction = player.transform.position - transform.position;
+        Vector3 d1 = feet.transform.position - transform.position;
+        Vector3 d2 = head.transform.position - transform.position;
         float length = Vector3.Distance(player.transform.position, transform.position);
         Debug.DrawRay(transform.position, direction.normalized * length, Color.red);
 
@@ -16,7 +20,9 @@ public class CameraRaycast : MonoBehaviour
         //RaycastHit2D currentHit = Physics2D.Raycast(transform.position, direction, length, mask);
         //RaycastHit2D currentHit = Physics2D.Raycast(transform.position, direction, length);
         RaycastHit currentHit;
-        if (Physics.Raycast(transform.position, direction, out currentHit, length, LayerMask.GetMask("Background")))
+        if (Physics.Raycast(transform.position, direction, out currentHit, length, LayerMask.GetMask("Background")) ||
+             Physics.Raycast(transform.position, d1, out currentHit, length, LayerMask.GetMask("Background")) ||
+              Physics.Raycast(transform.position, d2, out currentHit, length, LayerMask.GetMask("Background")))
         //if (currentHit.collider != null)
         {
             AlphaWalls AW = currentHit.transform.GetComponent<AlphaWalls>();
