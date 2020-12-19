@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 288273503}
   m_Layer: 9
   m_Name: platform (5)
-  m_TagString: Untagged
+  m_TagString: Main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4437,7 +4437,7 @@ GameObject:
   - component: {fileID: 1132685686}
   m_Layer: 9
   m_Name: platform (6)
-  m_TagString: Untagged
+  m_TagString: Main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
