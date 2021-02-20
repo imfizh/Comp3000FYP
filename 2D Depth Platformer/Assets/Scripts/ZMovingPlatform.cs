@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ZMovingPlatform : MonoBehaviour
 {
@@ -45,9 +43,13 @@ public class ZMovingPlatform : MonoBehaviour
             if (onPlatform==true)
             {
                 GameObject.Find("mc").layer = 14;
+                SpriteRenderer rend;
+                rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
+                rend.sortingLayerName = "PlayerBack";
             }
             this.gameObject.layer=13;
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
+            //this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (nextPos == sPos.position)
         {
@@ -58,6 +60,9 @@ public class ZMovingPlatform : MonoBehaviour
             if (onPlatform == true)
             {
                 GameObject.Find("mc").layer = 10;
+                SpriteRenderer rend;
+                rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
+                rend.sortingLayerName = "Player";
             }
             this.gameObject.layer =12;
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
