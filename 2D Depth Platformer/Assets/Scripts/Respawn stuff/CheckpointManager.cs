@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    public int lastCheckpoint = 1;
+    public int currentCheckpoint = 1;
 
     public void ChangeCheckpoint(int checkpoint)
     {
-        lastCheckpoint = checkpoint;
+        currentCheckpoint = checkpoint;
     }
 }
