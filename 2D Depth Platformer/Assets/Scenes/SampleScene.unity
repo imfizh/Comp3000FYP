@@ -3585,7 +3585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613184949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 204.2, y: 11.86, z: 0}
+  m_LocalPosition: {x: 204.2, y: 12.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 927259312}
@@ -5984,6 +5984,7 @@ MonoBehaviour:
     - Are you planning on crossing over the bridge ahead?...
     - If so I'd be carefull, it's on the verge of collapsing...
   isDialogue: 0
+  uiObject: {fileID: 1287801064}
 --- !u!61 &1014565538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7220,6 +7221,7 @@ MonoBehaviour:
     - i do key things
     - now begone
   isDialogue: 0
+  uiObject: {fileID: 0}
 --- !u!61 &1122743752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11123,6 +11125,7 @@ MonoBehaviour:
 
 '
   isDialogue: 0
+  uiObject: {fileID: 1287801064}
 --- !u!1 &1728801292
 GameObject:
   m_ObjectHideFlags: 0
