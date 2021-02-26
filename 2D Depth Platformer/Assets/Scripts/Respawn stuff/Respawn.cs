@@ -35,19 +35,19 @@ public class Respawn : MonoBehaviour
         //}
         if (collision.tag == "Player" & currentCP == lastCP)
         {
-            if (GameObject.Find("mc").layer != GameObject.Find((lastCP-1).ToString()).layer)
+            if (GameObject.Find("mc").layer != GameObject.Find((lastCP).ToString()).layer)
             {
-                GameObject.Find("mc").layer = GameObject.Find((lastCP - 1).ToString()).layer;
+                GameObject.Find("mc").layer = GameObject.Find((lastCP).ToString()).layer;
             }
-            player.transform.position = respawn[lastCP-1].transform.position;
+            player.transform.position = respawn[lastCP].transform.position;
         }
         if (collision.tag == "Player" & currentCP != lastCP)
         {
-            if (GameObject.Find("mc").layer != GameObject.Find((currentCP - 1).ToString()).layer)
+            if (GameObject.Find("mc").layer != GameObject.Find((currentCP).ToString()).layer)
             {
-                GameObject.Find("mc").layer = GameObject.Find((currentCP - 1).ToString()).layer;
+                GameObject.Find("mc").layer = GameObject.Find((currentCP).ToString()).layer;
             }
-            player.transform.position = respawn[currentCP-1].transform.position;
+            player.transform.position = respawn[currentCP].transform.position;
         }
     }
 }
