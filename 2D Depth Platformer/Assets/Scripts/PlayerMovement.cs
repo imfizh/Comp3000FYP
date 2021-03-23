@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -73,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void LayerInteract()
     {
+        //Physics2D.IgnoreLayerCollision(14, 10, true);
+        //Physics2D.IgnoreLayerCollision(14, 14, true);
+        //Physics2D.IgnoreLayerCollision(10, 14, true);
+        //Physics2D.IgnoreLayerCollision(10, 10, true);
+
         if (this.gameObject.layer.Equals(10))
         {
             Physics2D.IgnoreLayerCollision(10, 13, true);
@@ -82,6 +88,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(10, 13, false);
             Physics2D.IgnoreLayerCollision(14, 12, true);
+            
         }
     }
+
+    
 }
