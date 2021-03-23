@@ -10,10 +10,10 @@ public class levelLoader : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            LoadLevel();
-        }
+        //if (Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    LoadLevel();
+        //}
     }
     public void LoadLevel()
     {
