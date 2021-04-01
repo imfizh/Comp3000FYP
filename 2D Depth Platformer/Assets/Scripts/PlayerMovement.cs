@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,8 +48,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             isJumping = true;
+            AudioSource audio = this.GetComponent<AudioSource>();
+            audio.Play();
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            
         }
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
