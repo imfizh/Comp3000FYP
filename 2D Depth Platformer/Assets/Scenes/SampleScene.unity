@@ -2646,7 +2646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427388681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.550003, y: -1.8499997, z: 0}
+  m_LocalPosition: {x: 0.550003, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2011591890}
@@ -9749,7 +9749,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1776367211
   m_SortingLayer: 7
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7221134626440604795, guid: dd714b37f3d965b44b092ae0aadc4a0b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10615,7 +10615,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1776367211
   m_SortingLayer: 7
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 5500015429425755588, guid: dd714b37f3d965b44b092ae0aadc4a0b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14225,7 +14225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535954778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11999765, y: -2.0299997, z: 0}
+  m_LocalPosition: {x: -0.1199977, y: -2.0299997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 981181926}
@@ -18190,8 +18190,9 @@ GameObject:
   - component: {fileID: 2011591893}
   - component: {fileID: 2011591892}
   - component: {fileID: 2011591891}
-  - component: {fileID: 2011591894}
   - component: {fileID: 2011591895}
+  - component: {fileID: 2011591894}
+  - component: {fileID: 2011591896}
   m_Layer: 10
   m_Name: mc
   m_TagString: Player
@@ -18277,7 +18278,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!81 &2011591894
+--- !u!95 &2011591894
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011591889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb4933dfef2bfeb4c87aa35b2f799b00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &2011591895
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18285,7 +18305,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011591889}
   m_Enabled: 1
---- !u!82 &2011591895
+--- !u!82 &2011591896
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

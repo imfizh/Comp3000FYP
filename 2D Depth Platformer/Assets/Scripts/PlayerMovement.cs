@@ -20,10 +20,12 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
+    private Animator anim;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -47,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
+            anim.SetTrigger("takeOff");
             isJumping = true;
             AudioSource audio = this.GetComponent<AudioSource>();
             audio.Play();
@@ -68,6 +71,21 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
         }
+        if (isGrounded == false)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else { anim.SetBool("isJumping", false); }
+
+        if (moveInput == 0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
+        }
+
     }
 
     void Flip()
