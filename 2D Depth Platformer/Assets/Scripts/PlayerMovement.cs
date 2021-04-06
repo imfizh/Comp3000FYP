@@ -115,5 +115,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    public void FootStep()
+    {
+        AudioSource footStep = GameObject.Find("body").GetComponent<AudioSource>();
+        footStep.Play();
+    }
 }
