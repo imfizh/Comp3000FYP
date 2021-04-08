@@ -14,6 +14,7 @@ public class BridgeTriggerScript : MonoBehaviour
     {
         
         GameObject.Find("mc").GetComponent<PlayerMovement>().speed = 0;
+        this.GetComponent<AudioSource>().Play();
         StartCoroutine(Load(1));
     }
     IEnumerator Load(int index)

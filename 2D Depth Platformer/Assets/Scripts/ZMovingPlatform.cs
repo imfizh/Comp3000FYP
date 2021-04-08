@@ -7,10 +7,13 @@ public class ZMovingPlatform : MonoBehaviour
     Vector3 nextPos;
     float elapsed = 0f;
     bool onPlatform=false;
+
+    AudioSource zAudio;
     // Start is called before the first frame update
     void Start()
     {
         nextPos = StartPos.position;
+        zAudio = this.GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class ZMovingPlatform : MonoBehaviour
     }
     void Move()
     {
+        zAudio.Play();
         transform.position = nextPos;
         if (nextPos == ePos.position)
         {
