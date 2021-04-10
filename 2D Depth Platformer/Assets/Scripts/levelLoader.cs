@@ -18,7 +18,7 @@ public class levelLoader : MonoBehaviour
     public void LoadLevel()
     {
         //SceneManager.LoadScene("Underground");
-        StartCoroutine(Load(1));
+        StartCoroutine(Load(2));
     }
 
     IEnumerator Load(int index){
