@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, WIG);
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, LayerMask.GetMask("LayerMain", "LayerBack", "Ground"));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, LayerMask.GetMask("LayerMain", "LayerBack", "Ground", "LayerFront"));
         
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
@@ -106,12 +106,28 @@ public class PlayerMovement : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(10, 13, true);
             Physics2D.IgnoreLayerCollision(14, 12, false);
+            Physics2D.IgnoreLayerCollision(10, 15, true);
+            Physics2D.IgnoreLayerCollision(16, 13, false);
+            Physics2D.IgnoreLayerCollision(16, 12, false);
+            Physics2D.IgnoreLayerCollision(14, 15, false);
         }
         if (this.gameObject.layer.Equals(14))
         {
             Physics2D.IgnoreLayerCollision(10, 13, false);
             Physics2D.IgnoreLayerCollision(14, 12, true);
-            
+            Physics2D.IgnoreLayerCollision(10, 15, false);
+            Physics2D.IgnoreLayerCollision(16, 13, false);
+            Physics2D.IgnoreLayerCollision(16, 12, false);
+            Physics2D.IgnoreLayerCollision(14, 15, true);
+        }
+        if (this.gameObject.layer.Equals(16))
+        {
+            Physics2D.IgnoreLayerCollision(16, 13, true);
+            Physics2D.IgnoreLayerCollision(16, 12, true);
+            Physics2D.IgnoreLayerCollision(14, 12, false);
+            Physics2D.IgnoreLayerCollision(10, 13, false);
+            Physics2D.IgnoreLayerCollision(10, 15, false);
+            Physics2D.IgnoreLayerCollision(14, 15, false);
         }
     }
 

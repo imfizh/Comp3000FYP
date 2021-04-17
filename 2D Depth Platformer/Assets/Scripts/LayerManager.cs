@@ -16,6 +16,10 @@ public class LayerManager : MonoBehaviour
     {
         this.layer = 0;
     }
+    public void FrontLayer()
+    {
+        this.layer = 2;
+    }
 
     public int GetLayer(int cl)
     {

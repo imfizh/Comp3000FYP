@@ -24,8 +24,8 @@ TagManager:
   - LayerMain
   - LayerBack
   - PlayerBack
-  - 
-  - 
+  - LayerFront
+  - PlayerFront
   - 
   - 
   - 
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 4074129919
+    locked: 0
+  - name: FrontLayer
+    uniqueID: 1911794797
     locked: 0
