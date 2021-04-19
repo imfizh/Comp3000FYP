@@ -153,7 +153,7 @@ public class ZMovingPlatform : MonoBehaviour
             {
                 SpriteRenderer rend;
                 rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
-                rend.sortingLayerName = "PlayerMain";
+                rend.sortingLayerName = "Player";
                 GameObject.Find("mc").layer = 10;
             }
         }
