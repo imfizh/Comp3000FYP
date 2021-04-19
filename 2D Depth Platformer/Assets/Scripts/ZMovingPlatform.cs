@@ -16,7 +16,7 @@ public class ZMovingPlatform : MonoBehaviour
     void Start()
     {
         nextPos = StartPos.position;
-        //zAudio = this.GetComponentInChildren<AudioSource>();
+        zAudio = this.GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -94,18 +94,33 @@ public class ZMovingPlatform : MonoBehaviour
     }
     void Move()
     {
-       // zAudio.Play();
+        zAudio.Play();
             transform.position = nextPos;
             GameObject go = this.gameObject;
             LayerManager other = (LayerManager)go.GetComponent(typeof(LayerManager));
 
         if (nextPosLayer == ePos.layer)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = eSprite;
+            if (eSprite != null)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = eSprite;
+            }
+            else
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
+            }
+            
         }
         else if (nextPosLayer == sPos.layer)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = sSprite;
+            if (sSprite != null)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = sSprite;
+            }
+            else
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
 
 

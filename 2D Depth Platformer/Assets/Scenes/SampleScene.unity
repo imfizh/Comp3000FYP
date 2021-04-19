@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4923,6 +4923,8 @@ MonoBehaviour:
   sPos: {fileID: 950291048}
   ePos: {fileID: 1570863817}
   StartPos: {fileID: 950291048}
+  sSprite: {fileID: 0}
+  eSprite: {fileID: 0}
 --- !u!61 &581622369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13898,7 +13900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1031606242}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19103,9 +19105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fd0e55607481541bc5762e6c0de8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sPos: {fileID: 1031606242}
-  ePos: {fileID: 1993806382}
+  sPos: {fileID: 1031606241}
+  ePos: {fileID: 1993806381}
   StartPos: {fileID: 1031606242}
+  sSprite: {fileID: 0}
+  eSprite: {fileID: 0}
 --- !u!114 &1062346429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38990,7 +38994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1627877000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39250,7 +39254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681422959}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39590,9 +39594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fd0e55607481541bc5762e6c0de8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sPos: {fileID: 1681422959}
-  ePos: {fileID: 1627877000}
+  sPos: {fileID: 1681422958}
+  ePos: {fileID: 1627876999}
   StartPos: {fileID: 1681422959}
+  sSprite: {fileID: 0}
+  eSprite: {fileID: 0}
 --- !u!114 &1703328467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51803,7 +51809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993806382}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51962,7 +51968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011591889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.7, y: -0.6, z: 0}
+  m_LocalPosition: {x: -14.7, y: -0.9, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 1535954779}

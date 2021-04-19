@@ -14,6 +14,6 @@ public class ResetY : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
-        GameObject.Find("mc").layer = 10;
+        GameObject.Find("mc").layer = 14;
     }
 }
