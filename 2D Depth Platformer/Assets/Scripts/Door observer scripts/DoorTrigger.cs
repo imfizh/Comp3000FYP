@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
+    public int id;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DoorEvents.current.DoorTriggerEnter();
+        DoorEvents.current.DoorTriggerEnter(id);
     }
 }
