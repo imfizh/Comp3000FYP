@@ -7,16 +7,24 @@ public class ZMovingPlatform : MonoBehaviour
     public Transform StartPos;
     Vector3 nextPos;
     float elapsed = 0f;
-    bool onPlatform=false;
+    bool onPlatform = false;
     int nextPosLayer;
     public Sprite sSprite;
     public Sprite eSprite;
     AudioSource zAudio;
+    private GameObject[] playerSprites = new GameObject[7];
     // Start is called before the first frame update
     void Start()
     {
         nextPos = StartPos.position;
         zAudio = this.GetComponentInChildren<AudioSource>();
+        playerSprites[0] = GameObject.Find("body");
+        playerSprites[1] = GameObject.Find("head");
+        playerSprites[2] = GameObject.Find("head1");
+        playerSprites[3] = GameObject.Find("left arm");
+        playerSprites[4] = GameObject.Find("right arm");
+        playerSprites[5] = GameObject.Find("left leg");
+        playerSprites[6] = GameObject.Find("right leg");
     }
 
     // Update is called once per frame
@@ -129,9 +137,15 @@ public class ZMovingPlatform : MonoBehaviour
             other.FrontLayer();
             if (onPlatform == true)
             {
-                SpriteRenderer rend;
-                rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
-                rend.sortingLayerName = "PlayerFront";
+                //SpriteRenderer rend;
+                //rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
+                //rend.sortingLayerName = "PlayerFront";
+                for (int n = 0;n<playerSprites.Length;n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerFront";
+                }
                 GameObject.Find("mc").layer = 16;
             }
             }
@@ -140,9 +154,15 @@ public class ZMovingPlatform : MonoBehaviour
             other.BackLayer();
             if (onPlatform == true)
             {
-                SpriteRenderer rend;
-                rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
-                rend.sortingLayerName = "PlayerBack";
+                //SpriteRenderer rend;
+                //rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
+                //rend.sortingLayerName = "PlayerBack";
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerBack";
+                }
                 GameObject.Find("mc").layer = 14;
             }
         }
@@ -151,9 +171,15 @@ public class ZMovingPlatform : MonoBehaviour
             other.MainLayer();
             if (onPlatform == true)
             {
-                SpriteRenderer rend;
-                rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
-                rend.sortingLayerName = "Player";
+                //SpriteRenderer rend;
+                //rend = GameObject.Find("mc").GetComponent<SpriteRenderer>();
+                //rend.sortingLayerName = "Player";
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "Player";
+                }
                 GameObject.Find("mc").layer = 10;
             }
         }

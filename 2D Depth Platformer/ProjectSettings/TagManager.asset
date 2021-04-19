@@ -66,12 +66,15 @@ TagManager:
   - name: Player
     uniqueID: 2518600085
     locked: 0
+  - name: FrontLayer
+    uniqueID: 1911794797
+    locked: 0
+  - name: PlayerFront
+    uniqueID: 3249858045
+    locked: 0
   - name: Interactable
     uniqueID: 3109655559
     locked: 0
   - name: Foreground
     uniqueID: 4074129919
-    locked: 0
-  - name: FrontLayer
-    uniqueID: 1911794797
     locked: 0
