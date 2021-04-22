@@ -9,10 +9,13 @@ public class PlatformDashBetween : MonoBehaviour
     GameObject player;
     private bool inTrigger = false;
     private int layer = 0;
+    private Animator dashAnim;
+    public GameObject dashEffect;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("mc");
+        dashAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,7 +42,9 @@ public class PlatformDashBetween : MonoBehaviour
         if (inTrigger == true && Input.GetKeyDown(KeyCode.K) && layer == 0)
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, end.transform.position.z);
-            if(end.layer == 12)
+            Instantiate(dashEffect, player.transform.position, Quaternion.identity);
+            dashAnim.SetTrigger("Shake");
+            if (end.layer == 12)
             {
                 player.layer = 10;
             }
@@ -56,6 +61,8 @@ public class PlatformDashBetween : MonoBehaviour
         else if (inTrigger == true && Input.GetKeyDown(KeyCode.K) && layer == 1)
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, start.transform.position.z);
+            Instantiate(dashEffect, player.transform.position, Quaternion.identity);
+            dashAnim.SetTrigger("Shake");
             if (start.layer == 12)
             {
                 player.layer = 10;
