@@ -21,11 +21,21 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
 
     private Animator anim;
-   // private Collider2D col;
+    private Animator dashAnim;
+    // private Collider2D col;
+
+    private float dashTime;
+    public float dashSpeed;
+    public float startDashTime;
+    private int direction;
+    private bool isDash = false;
+    public GameObject dashEffect;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        dashAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        dashTime = startDashTime;
     }
 
     private void FixedUpdate()
@@ -60,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        Dash();
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             anim.SetTrigger("takeOff");
@@ -163,5 +174,58 @@ public class PlayerMovement : MonoBehaviour
     {
         AudioSource footStep = GameObject.Find("body").GetComponent<AudioSource>();
         footStep.Play();
+    }
+
+    public void Dash()
+    {
+        if (isGrounded == true)
+        {
+            isDash = false;
+        }
+        if (direction == 0)
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                if (moveInput < 0)
+                {
+                    direction = 1; //moving left
+                }
+                else if (moveInput > 0)
+                {
+                    direction = 2; //moving right
+
+                }
+            }
+        }
+        else
+        {
+            if (dashTime<=0)
+            {
+                direction = 0;
+                dashTime = startDashTime;
+                rb.velocity = Vector2.zero;
+                
+            }
+            else
+            {
+                dashTime -= Time.deltaTime;
+                if (direction == 1 && isGrounded == false && isDash==false)
+                {
+                    // rb.velocity = Vector2.left * dashSpeed;
+                    isDash = true;
+                    Instantiate(dashEffect, this.transform.position, Quaternion.identity);
+                    dashAnim.SetTrigger("Shake");
+                    rb.transform.position = new Vector3(this.transform.position.x - 2.5f, this.transform.position.y, this.transform.position.z);
+                }
+                else if (direction == 2 && isGrounded == false && isDash == false)
+                {
+                    //rb.velocity = Vector2.right * dashSpeed;
+                    isDash = true;
+                    dashAnim.SetTrigger("Shake");
+                    Instantiate(dashEffect, this.transform.position, Quaternion.identity);
+                    rb.transform.position = new Vector3(this.transform.position.x + 2.5f, this.transform.position.y, this.transform.position.z);
+                }
+            }
+        }
     }
 }
