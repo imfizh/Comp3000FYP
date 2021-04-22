@@ -11,11 +11,19 @@ public class PlatformDashBetween : MonoBehaviour
     private int layer = 0;
     private Animator dashAnim;
     public GameObject dashEffect;
+    private GameObject[] playerSprites = new GameObject[7];
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("mc");
         dashAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        playerSprites[0] = GameObject.Find("body");
+        playerSprites[1] = GameObject.Find("head");
+        playerSprites[2] = GameObject.Find("head1");
+        playerSprites[3] = GameObject.Find("left arm");
+        playerSprites[4] = GameObject.Find("right arm");
+        playerSprites[5] = GameObject.Find("left leg");
+        playerSprites[6] = GameObject.Find("right leg");
     }
 
     // Update is called once per frame
@@ -47,14 +55,32 @@ public class PlatformDashBetween : MonoBehaviour
             if (end.layer == 12)
             {
                 player.layer = 10;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "Player";
+                }
             }
             else if (end.layer == 13)
             {
                 player.layer = 14;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerBack";
+                }
             }
             else if (end.layer == 15)
             {
                 player.layer = 16;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerFront";
+                }
             }
             layer = 1;
         }
@@ -66,14 +92,32 @@ public class PlatformDashBetween : MonoBehaviour
             if (start.layer == 12)
             {
                 player.layer = 10;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "Player";
+                }
             }
             else if (start.layer == 13)
             {
                 player.layer = 14;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerBack";
+                }
             }
             else if (start.layer == 15)
             {
                 player.layer = 16;
+                for (int n = 0; n < playerSprites.Length; n++)
+                {
+                    SpriteRenderer rend;
+                    rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                    rend.sortingLayerName = "PlayerFront";
+                }
             }
             layer = 0;
         }
