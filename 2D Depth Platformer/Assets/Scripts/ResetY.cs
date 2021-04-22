@@ -21,13 +21,17 @@ public class ResetY : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
-        GameObject.Find("mc").layer = 14;
-        for (int n = 0; n < playerSprites.Length; n++)
+        if (collision.gameObject.tag == "Player")
         {
-            SpriteRenderer rend;
-            rend = playerSprites[n].GetComponent<SpriteRenderer>();
-            rend.sortingLayerName = "PlayerBack";
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
+            GameObject.Find("mc").layer = 14;
+            for (int n = 0; n < playerSprites.Length; n++)
+            {
+                SpriteRenderer rend;
+                rend = playerSprites[n].GetComponent<SpriteRenderer>();
+                rend.sortingLayerName = "PlayerBack";
+            }
         }
+        
     }
 }

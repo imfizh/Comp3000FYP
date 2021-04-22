@@ -121,10 +121,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void LayerInteract()
     {
-        //Physics2D.IgnoreLayerCollision(14, 10, true);
-        //Physics2D.IgnoreLayerCollision(14, 14, true);
-        //Physics2D.IgnoreLayerCollision(10, 14, true);
-        //Physics2D.IgnoreLayerCollision(10, 10, true);
 
         if (this.gameObject.layer.Equals(10))
         {
@@ -132,13 +128,6 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(10, 13, true);
             Physics2D.IgnoreLayerCollision(10, 15, true);
             Physics2D.IgnoreLayerCollision(10, 9, true);
-
-            //Physics2D.IgnoreLayerCollision(10, 13, true);
-            //Physics2D.IgnoreLayerCollision(14, 12, false);
-            //Physics2D.IgnoreLayerCollision(10, 15, true);
-            //Physics2D.IgnoreLayerCollision(16, 13, false);
-            //Physics2D.IgnoreLayerCollision(16, 12, false);
-            //Physics2D.IgnoreLayerCollision(14, 15, false);
         }
         if (this.gameObject.layer.Equals(14))
         {
@@ -146,13 +135,6 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(14, 12, true);
             Physics2D.IgnoreLayerCollision(14, 15, true);
             Physics2D.IgnoreLayerCollision(14, 9, true);
-
-            //Physics2D.IgnoreLayerCollision(10, 13, false);
-            //Physics2D.IgnoreLayerCollision(14, 12, true);
-            //Physics2D.IgnoreLayerCollision(10, 15, false);
-            //Physics2D.IgnoreLayerCollision(16, 13, false);
-            //Physics2D.IgnoreLayerCollision(16, 12, false);
-            //Physics2D.IgnoreLayerCollision(14, 15, true);
         }
         if (this.gameObject.layer.Equals(16))
         {
@@ -160,13 +142,6 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(16, 12, true);
             Physics2D.IgnoreLayerCollision(16, 13, true);
             Physics2D.IgnoreLayerCollision(16, 9, true);
-
-            //Physics2D.IgnoreLayerCollision(16, 13, true);
-            //Physics2D.IgnoreLayerCollision(16, 12, true);
-            //Physics2D.IgnoreLayerCollision(14, 12, false);
-            //Physics2D.IgnoreLayerCollision(10, 13, false);
-            //Physics2D.IgnoreLayerCollision(10, 15, false);
-            //Physics2D.IgnoreLayerCollision(14, 15, false);
         }
     }
 
