@@ -25,6 +25,12 @@ public class RespawnController : MonoBehaviour
             {
                 GameObject.Find("dashBetween").GetComponent<PlatformDashBetween>().layer = 0;
             }
+            else if (this.id != 1)
+            {
+                GameObject.Find("dashBetween 2").GetComponent<PlatformDashBetween>().layer = 0;
+                GameObject.Find("dashBetween 3").GetComponent<PlatformDashBetween>().layer = 0;
+                GameObject.Find("dashBetween 4").GetComponent<PlatformDashBetween>().layer = 0;
+            }
         }
     }
     public void OnDisable()
