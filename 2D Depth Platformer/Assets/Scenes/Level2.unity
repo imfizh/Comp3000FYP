@@ -1907,6 +1907,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &144460107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144460108}
+  m_Layer: 0
+  m_Name: City Tutorials
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144460108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144460107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 351327471}
+  - {fileID: 410673470}
+  - {fileID: 1778937167}
+  - {fileID: 225578541}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145321371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2685,82 @@ Transform:
   m_Father: {fileID: 567178771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &225578540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225578541}
+  - component: {fileID: 225578543}
+  - component: {fileID: 225578542}
+  m_Layer: 0
+  m_Name: Moving platform z tut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &225578541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 204.35, y: 12.64, z: -0.9095336}
+  m_LocalScale: {x: 0.79965, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 144460108}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225578542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a12c1a67f7fde439882f80dbdeda62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Tutorial
+    sentences:
+    - Some rocks move backwards and forwards, wait until the rock is on the same layer
+      as you before jumping on...
+  isDialogue: 0
+--- !u!61 &225578543
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578540}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.348001, y: 0.23815382}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4786348, y: 3.0753796}
+  m_EdgeRadius: 0
 --- !u!1 &228390601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,7 +2988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254048028}
   - component: {fileID: 254048029}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: head1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4590,6 +4700,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &351327470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351327471}
+  - component: {fileID: 351327473}
+  - component: {fileID: 351327472}
+  m_Layer: 0
+  m_Name: dash tut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &351327471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351327470}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.46, y: 13.3, z: -0.9095336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 144460108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &351327472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351327470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a12c1a67f7fde439882f80dbdeda62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Tutorial
+    sentences:
+    - Press "L" whilst jumping to perform a dash
+  isDialogue: 0
+--- !u!61 &351327473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351327470}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07284975, y: 0.23815382}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9283323, y: 3.0753796}
+  m_EdgeRadius: 0
 --- !u!1 &355855358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5357,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &410673469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410673470}
+  - component: {fileID: 410673472}
+  - component: {fileID: 410673471}
+  m_Layer: 0
+  m_Name: Z Dash tut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410673470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410673469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 125.14, y: 13.17, z: -0.9095336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 144460108}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &410673471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410673469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a12c1a67f7fde439882f80dbdeda62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Tutorial
+    sentences:
+    - Whilst on a platform that is in line with another platform behind/infront of
+      it, press "K" to move between them
+  isDialogue: 0
+--- !u!61 &410673472
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410673469}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07284975, y: 0.23815382}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9283323, y: 3.0753796}
+  m_EdgeRadius: 0
 --- !u!1 &424816250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5618,7 +5879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427388682}
   - component: {fileID: 427388683}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: right leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8064,8 +8325,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278251775
+  m_fontColor: {r: 1, g: 0.94274926, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8454,6 +8715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 30981939}
   end: {fileID: 1317797940}
+  layer: 0
   dashEffect: {fileID: 993830125620701900, guid: 8669d411479619b4080c50ddb8f2ca3b,
     type: 3}
 --- !u!61 &557370731
@@ -9731,6 +9993,7 @@ GameObject:
   - component: {fileID: 613184950}
   - component: {fileID: 613184952}
   - component: {fileID: 613184951}
+  - component: {fileID: 613184953}
   m_Layer: 10
   m_Name: 3
   m_TagString: Untagged
@@ -9790,6 +10053,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4310284, y: 2.9451952}
   m_EdgeRadius: 0
+--- !u!114 &613184953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613184949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ed6e82a09fa444891018b6d1bc794b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!1 &614600494
 GameObject:
   m_ObjectHideFlags: 0
@@ -12091,6 +12367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1829371583}
   end: {fileID: 1869929904}
+  layer: 0
   dashEffect: {fileID: 993830125620701900, guid: 8669d411479619b4080c50ddb8f2ca3b,
     type: 3}
 --- !u!61 &728495494
@@ -20392,7 +20669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981181926}
   - component: {fileID: 981181927}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20736,7 +21013,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1004165677}
   - component: {fileID: 1004165676}
-  m_Layer: 0
+  - component: {fileID: 1004165678}
+  m_Layer: 9
   m_Name: door2 - 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20806,6 +21084,32 @@ Transform:
   m_Father: {fileID: 670781529}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1004165678
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004165675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.9443111}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.96, y: 10}
+    newSize: {x: 1.96, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.96, y: 4.1113777}
+  m_EdgeRadius: 0
 --- !u!1 &1009958981
 GameObject:
   m_ObjectHideFlags: 0
@@ -27374,7 +27678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085915359}
   - component: {fileID: 1085915360}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: left leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28074,6 +28378,7 @@ GameObject:
   - component: {fileID: 1120873801}
   - component: {fileID: 1120873803}
   - component: {fileID: 1120873802}
+  - component: {fileID: 1120873804}
   m_Layer: 10
   m_Name: 2
   m_TagString: Untagged
@@ -28133,6 +28438,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4310284, y: 2.9451952}
   m_EdgeRadius: 0
+--- !u!114 &1120873804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120873800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ed6e82a09fa444891018b6d1bc794b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!1 &1122743747
 GameObject:
   m_ObjectHideFlags: 0
@@ -28591,7 +28909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133840159}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -28668,7 +28986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1140125972}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28865,7 +29183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144747514}
   - component: {fileID: 1144747515}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: left arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29297,7 +29615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.975342, y: 105}
+  m_AnchoredPosition: {x: -29.1, y: 97}
   m_SizeDelta: {x: 200, y: 24.995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160936437
@@ -29322,8 +29640,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: NPC
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63653be6ab9b5634fad9e347144afaab, type: 2}
+  m_sharedMaterial: {fileID: 538143576156002465, guid: 63653be6ab9b5634fad9e347144afaab,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -44354,7 +44673,7 @@ GameObject:
   - component: {fileID: 1535954779}
   - component: {fileID: 1535954780}
   - component: {fileID: 1535954781}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44677,7 +44996,7 @@ GameObject:
   - component: {fileID: 1554051746}
   - component: {fileID: 1554051745}
   - component: {fileID: 1554051747}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: black box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50870,7 +51189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676854195}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51568,7 +51887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691593334}
   - component: {fileID: 1691593335}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: right arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57576,8 +57895,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278251775
+  m_fontColor: {r: 1, g: 0.9411765, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -58311,6 +58630,82 @@ Transform:
   m_Father: {fileID: 1376938579}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1778937166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778937167}
+  - component: {fileID: 1778937169}
+  - component: {fileID: 1778937168}
+  m_Layer: 0
+  m_Name: Moving platform tut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1778937167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778937166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67.49, y: 0.26, z: -0.9095336}
+  m_LocalScale: {x: 0.79965, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 144460108}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778937168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778937166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a12c1a67f7fde439882f80dbdeda62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Tutorial
+    sentences:
+    - Some rocks in the canyon move on their own, wait till the right moment to jump
+      on...
+  isDialogue: 0
+--- !u!61 &1778937169
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778937166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.348001, y: 0.23815382}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4786348, y: 3.0753796}
+  m_EdgeRadius: 0
 --- !u!1 &1782113876
 GameObject:
   m_ObjectHideFlags: 0
@@ -59613,7 +60008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43734425, g: 0.5823117, b: 0.7924528, a: 1}
+  m_Color: {r: 0.38039216, g: 0.29803923, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -66397,7 +66792,7 @@ GameObject:
   - component: {fileID: 2011591894}
   - component: {fileID: 2011591896}
   - component: {fileID: 2011591897}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: mc
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -66412,7 +66807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011591889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.92, y: 12.8, z: 0}
+  m_LocalPosition: {x: -36.2, y: -0.5, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 1535954779}
@@ -66512,7 +66907,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011591889}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &2011591896
 AudioSource:
   m_ObjectHideFlags: 0
@@ -66690,6 +67085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1455445539}
   end: {fileID: 997822564}
+  layer: 0
   dashEffect: {fileID: 993830125620701900, guid: 8669d411479619b4080c50ddb8f2ca3b,
     type: 3}
 --- !u!61 &2017390789
@@ -73268,7 +73664,7 @@ GameObject:
   - component: {fileID: 2122909668}
   - component: {fileID: 2122909667}
   m_Layer: 0
-  m_Name: Death barrier (1)
+  m_Name: Death barrier observer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

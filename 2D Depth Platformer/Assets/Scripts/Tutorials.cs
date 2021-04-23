@@ -7,10 +7,7 @@ public class Tutorials : MonoBehaviour
     public Dialogue dialogue;
     public bool isDialogue = false;
 
-    private bool jump = false;
-    private bool jumpHigh = false;
-    private bool movePlat = false;
-    private bool movePlatZ = false;
+    private bool tutTriggered;
 
     public void TriggerDialogue()
     {
@@ -20,20 +17,7 @@ public class Tutorials : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       // TriggerDialogue();
-        if (this.name == "Jumping tut" && jump == false)
-        {
-            TriggerDialogue();
-        }
-        else if (this.name == "Jumping higher tut" && jumpHigh == false)
-        {
-            TriggerDialogue();
-        }
-        else if (this.name == "Moving platform tut" && movePlat == false)
-        {
-            TriggerDialogue();
-        }
-        else if (this.name == "Moving platform z tut" && movePlatZ == false)
+        if (collision.tag == "Player" && tutTriggered == false)
         {
             TriggerDialogue();
         }
@@ -42,22 +26,11 @@ public class Tutorials : MonoBehaviour
     {
         FindObjectOfType<DiaglogueManager>().EndDialogue();
         isDialogue = false;
-        if (this.name == "Jumping tut")
+        if (collision.tag == "Player" && tutTriggered == false)
         {
-            jump = true;
+            this.tutTriggered = true;
         }
-        else if (this.name == "Jumping higher tut")
-        {
-            jumpHigh = true;
-        }
-        else if (this.name == "Moving platform tut")
-        {
-            movePlat = true;
-        }
-        else if (this.name == "Moving platform z tut")
-        {
-            movePlatZ = true;
-        }
+        
     }
 
     public void Update()
