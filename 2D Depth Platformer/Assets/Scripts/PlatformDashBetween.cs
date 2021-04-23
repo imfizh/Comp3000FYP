@@ -8,7 +8,7 @@ public class PlatformDashBetween : MonoBehaviour
     public GameObject end;
     GameObject player;
     private bool inTrigger = false;
-    private int layer = 0;
+    public int layer = 0;
     private Animator dashAnim;
     public GameObject dashEffect;
     private GameObject[] playerSprites = new GameObject[7];
