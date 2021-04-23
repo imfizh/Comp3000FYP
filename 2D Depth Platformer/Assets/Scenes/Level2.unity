@@ -13659,7 +13659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742551981}
   - component: {fileID: 742551982}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PopSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70152,7 +70152,7 @@ GameObject:
   - component: {fileID: 2011591894}
   - component: {fileID: 2011591896}
   - component: {fileID: 2011591897}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: mc
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -70167,7 +70167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011591889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.2, y: 13.9, z: 0}
+  m_LocalPosition: {x: -35.5, y: -0.5, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 1535954779}
