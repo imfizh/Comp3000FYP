@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -30,12 +32,16 @@ public class PlayerMovement : MonoBehaviour
     private int direction;
     private bool isDash = false;
     public GameObject dashEffect;
+    public PostProcessVolume volume;
+    private DepthOfField dof = null;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         dashAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         dashTime = startDashTime;
+        volume.profile.TryGetSettings(out dof);
+        dof.enabled.value = false;
     }
 
     private void FixedUpdate()
