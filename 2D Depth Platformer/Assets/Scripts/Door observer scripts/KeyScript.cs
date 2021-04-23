@@ -8,6 +8,7 @@ public class KeyScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         this.gameObject.SetActive(false);
+        GameObject.Find("PopSound").GetComponent<AudioSource>().Play();
         door.GetComponent<DoorController>().id = 1;
         //GameObject.Find("door1").GetComponent<DoorController>().id = 1;
     }

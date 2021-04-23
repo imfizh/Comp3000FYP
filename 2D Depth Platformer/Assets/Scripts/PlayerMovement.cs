@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject dashEffect;
     public PostProcessVolume volume;
     private DepthOfField dof = null;
+    private AudioSource dashSoundEffect;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         dashTime = startDashTime;
         volume.profile.TryGetSettings(out dof);
         dof.enabled.value = false;
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            dashSoundEffect = GameObject.Find("DashSound").GetComponent<AudioSource>();
+        }
     }
 
     private void FixedUpdate()
@@ -195,6 +201,7 @@ public class PlayerMovement : MonoBehaviour
                     // rb.velocity = Vector2.left * dashSpeed;
                     isDash = true;
                     Instantiate(dashEffect, this.transform.position, Quaternion.identity);
+                    dashSoundEffect.Play();
                     dashAnim.SetTrigger("Shake");
                     rb.transform.position = new Vector3(this.transform.position.x - 2.5f, this.transform.position.y, this.transform.position.z);
                 }
@@ -204,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
                     isDash = true;
                     dashAnim.SetTrigger("Shake");
                     Instantiate(dashEffect, this.transform.position, Quaternion.identity);
+                    dashSoundEffect.Play();
                     rb.transform.position = new Vector3(this.transform.position.x + 2.5f, this.transform.position.y, this.transform.position.z);
                 }
             }

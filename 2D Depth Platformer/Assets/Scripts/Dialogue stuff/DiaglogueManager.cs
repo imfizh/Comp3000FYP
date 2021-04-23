@@ -17,6 +17,7 @@ public class DiaglogueManager : MonoBehaviour
 
    public void StartDialogue(Dialogue dialogue)
     {
+        GameObject.Find("PopSound").GetComponent<AudioSource>().Play();
         animator.SetBool("isOpen", true); 
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -28,7 +29,8 @@ public class DiaglogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        GameObject.Find("PopSound").GetComponent<AudioSource>().Play();
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;

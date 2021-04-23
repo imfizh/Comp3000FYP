@@ -12,6 +12,7 @@ public class PlatformDashBetween : MonoBehaviour
     private Animator dashAnim;
     public GameObject dashEffect;
     private GameObject[] playerSprites = new GameObject[7];
+    private AudioSource dashSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlatformDashBetween : MonoBehaviour
         playerSprites[4] = GameObject.Find("right arm");
         playerSprites[5] = GameObject.Find("left leg");
         playerSprites[6] = GameObject.Find("right leg");
+        dashSound = GameObject.Find("DashSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,8 @@ public class PlatformDashBetween : MonoBehaviour
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, end.transform.position.z);
             Instantiate(dashEffect, player.transform.position, Quaternion.identity);
+            
+            dashSound.Play();
             dashAnim.SetTrigger("Shake");
             if (end.layer == 12)
             {
@@ -88,6 +92,7 @@ public class PlatformDashBetween : MonoBehaviour
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, start.transform.position.z);
             Instantiate(dashEffect, player.transform.position, Quaternion.identity);
+            dashSound.Play();
             dashAnim.SetTrigger("Shake");
             if (start.layer == 12)
             {
