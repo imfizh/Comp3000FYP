@@ -40581,6 +40581,9 @@ GameObject:
   - component: {fileID: 1728801294}
   - component: {fileID: 1728801293}
   - component: {fileID: 1728801297}
+  - component: {fileID: 1728801300}
+  - component: {fileID: 1728801299}
+  - component: {fileID: 1728801298}
   m_Layer: 12
   m_Name: box
   m_TagString: Moveable
@@ -40795,6 +40798,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1728801298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728801292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297a1390aa7a85348a8b3a8360eb5ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  box: {fileID: 11400000, guid: 22e49cbfe7b4d7e4aba4a26c445731d2, type: 2}
+--- !u!61 &1728801299
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728801292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.044807, y: -1.8375497}
+  m_SpriteTilingProperty:
+    border: {x: 18.302181, y: 11.83, z: 22.33266, w: 15.56}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 49.61591, y: 35.08}
+    newSize: {x: 49.61591, y: 35.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.210967, y: 5.4709377}
+  m_EdgeRadius: 0
+--- !u!114 &1728801300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728801292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be182edae0bf8a84d85a37328d941f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiObject: {fileID: 1287801064}
+  rb: {fileID: 1728801293}
 --- !u!1 &1730065344
 GameObject:
   m_ObjectHideFlags: 0
@@ -45558,14 +45614,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1741755516}
   - component: {fileID: 1741755518}
-  - component: {fileID: 1741755517}
   m_Layer: 12
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1741755516
 Transform:
   m_ObjectHideFlags: 0
@@ -45580,20 +45635,6 @@ Transform:
   m_Father: {fileID: 1728801296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741755517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741755515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be182edae0bf8a84d85a37328d941f69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiObject: {fileID: 1287801064}
-  rb: {fileID: 1728801293}
 --- !u!61 &1741755518
 BoxCollider2D:
   m_ObjectHideFlags: 0

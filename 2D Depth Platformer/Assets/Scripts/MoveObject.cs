@@ -17,7 +17,8 @@ public class MoveObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        push = GameObject.Find("box").GetComponent<AudioSource>();
+       // push = GameObject.Find("box").GetComponent<AudioSource>();
+        push = this.GetComponent<AudioSource>();
         player = GameObject.Find("mc");
     }
 
@@ -63,7 +64,8 @@ public class MoveObject : MonoBehaviour
             uiObject.SetActive(false);
             if(stopInteract == true)
             {
-                rb.mass = 2000;
+                rb.mass = this.GetComponent<BoxDisplay>().box.massStationary;
+                //rb.mass = 2000;
                 stopInteract = false;
             }
             push.Stop();
@@ -75,7 +77,8 @@ public class MoveObject : MonoBehaviour
     public void Interaction()
     {
         uiObject.SetActive(false);
-        rb.mass = 20;
+        rb.mass = this.GetComponent<BoxDisplay>().box.massPush;
+        //rb.mass = 20;
         pressed = true;
         stopInteract = true;
     }
