@@ -15,3 +15,10 @@ Game Engine - This project will be creating within Unity version: 2019.2.3f1
 Art Assets - I will be using a combination of Photoshop CC 2019 and MS Paint to create the art for the game 
 
 Sound Assets - For any sounds I will be using audacity
+
+
+# Third Party Assests Usd
+
+Background music for city level -https://www.youtube.com/watch?v=2gsn1HrDtdI
+
+Background music for canyon level - https://www.youtube.com/watch?v=rsOakhtu6Yw
