@@ -17,7 +17,7 @@ Art Assets - I will be using a combination of Photoshop CC 2019 and MS Paint to 
 Sound Assets - For any sounds I will be using audacity
 
 
-# Third Party Assests Usd
+# Third Party Assests Used
 
 Background music for city level -https://www.youtube.com/watch?v=2gsn1HrDtdI
 
