@@ -2,7 +2,7 @@
 
 # Project idea
 
-This project is for the comp3000 final year module. 
+This project is for the comp3000 final year modul, under the supervison of Paul Watson. 
 
 The idea for my final year project is to create a 2D platformer which is based around the mechanic of depth. After doing research on this type of game I found that depth was used very differently throughout many different games. For example within the game LIMBO a sense of depth is created through the use of parallax scrolling on the background layers, whereas in the game PONCHO, depth is explored by having the player be able to interact with the background layers, such as moving between the foreground and background or having platforms moving that the player cannot access until it moves to the same layer as the player. The way PONCHO explored the idea of depth really stood out to me as, upon further research, I couldn’t find any other 2D platformers that utilized depth in such a way.
 
