@@ -19,7 +19,7 @@ public class RespawnController : MonoBehaviour
         //Res = GameObject.Find("Death & respawn").GetComponent<CheckpointManager>().currentCheckpoint;
         if (id == this.id)
         {
-            GameObject.Find("mc").layer = this.gameObject.layer;
+            player.layer = this.gameObject.layer;
             player.transform.position = this.transform.position;
             if(this.id == 1)
             {

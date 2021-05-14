@@ -11,38 +11,34 @@ public class MoveObject : MonoBehaviour
     private bool stopInteract = false;
     AudioSource push;
     private GameObject player;
-    private bool test;
+    private bool beingPushed;
     private bool stopped;
     private bool pressed = false;
-    // Start is called before the first frame update
     void Start()
     {
-       // push = GameObject.Find("box").GetComponent<AudioSource>();
         push = this.GetComponent<AudioSource>();
         player = GameObject.Find("mc");
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (interact == true && Input.GetKeyDown(KeyCode.E))
         {
-            test = true;
+            beingPushed = true;
             Interaction();
         }
-        if (test == true && player.GetComponent<PlayerMovement>().moveInput != 0)
+        if (beingPushed == true && player.GetComponent<PlayerMovement>().moveInput != 0)
         {
             push.Play();
-            test = false;
+            beingPushed = false;
         }
-        if (test == false && player.GetComponent<PlayerMovement>().moveInput == 0)
+        if (beingPushed == false && player.GetComponent<PlayerMovement>().moveInput == 0)
         {
             push.Stop();
             stopped = true;
         }
-        if (test == false && interact == true && stopped == true && pressed == true)
+        if (beingPushed == false && interact == true && stopped == true && pressed == true)
         {
-            test = true;
+            beingPushed = true;
             stopped = false;
         }
 
@@ -65,12 +61,11 @@ public class MoveObject : MonoBehaviour
             if(stopInteract == true)
             {
                 rb.mass = this.GetComponent<BoxDisplay>().box.massStationary;
-                //rb.mass = 2000;
                 stopInteract = false;
             }
             push.Stop();
         }
-        test = false;
+        beingPushed = false;
         pressed = false;
     }
 
@@ -78,7 +73,6 @@ public class MoveObject : MonoBehaviour
     {
         uiObject.SetActive(false);
         rb.mass = this.GetComponent<BoxDisplay>().box.massPush;
-        //rb.mass = 20;
         pressed = true;
         stopInteract = true;
     }

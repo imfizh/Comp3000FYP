@@ -29,12 +29,13 @@ public class DiaglogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
-        GameObject.Find("PopSound").GetComponent<AudioSource>().Play();
+        
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
+        GameObject.Find("PopSound").GetComponent<AudioSource>().Play();
         string sentence = sentences.Dequeue();
         //dialogueText.text = sentence;
         StopAllCoroutines();

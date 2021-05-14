@@ -28,7 +28,7 @@ public class Tutorials : MonoBehaviour
         isDialogue = false;
         if (collision.tag == "Player" && tutTriggered == false)
         {
-            this.tutTriggered = true;
+           // this.tutTriggered = true;
         }
         
     }

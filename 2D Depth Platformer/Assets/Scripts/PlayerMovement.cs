@@ -52,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, WIG);
         if (this.gameObject.layer.Equals(10))
         {
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, LayerMask.GetMask("LayerMain", "Ground"));
@@ -65,9 +64,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, LayerMask.GetMask("LayerFront", "Ground"));
         }
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, LayerMask.GetMask("LayerMain", "LayerBack", "Ground", "LayerFront"));
-        //col = Physics2D.OverlapCircle(groundCheck.position, checkRadius);
-        //Debug.Log(col.ToString());
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         LayerInteract();
@@ -79,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+        
+        
     }
     private void Update()
     {
@@ -95,13 +93,13 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
-            if(jumpTimeCounter > 0)
+            if (jumpTimeCounter > 0)
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             }
             else { isJumping = false; }
-            
+
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -139,21 +137,18 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(10, 12, false);
             Physics2D.IgnoreLayerCollision(10, 13, true);
             Physics2D.IgnoreLayerCollision(10, 15, true);
-           // Physics2D.IgnoreLayerCollision(10, 9, true);
         }
         if (this.gameObject.layer.Equals(14))
         {
             Physics2D.IgnoreLayerCollision(14, 13, false);
             Physics2D.IgnoreLayerCollision(14, 12, true);
             Physics2D.IgnoreLayerCollision(14, 15, true);
-            //Physics2D.IgnoreLayerCollision(14, 9, true);
         }
         if (this.gameObject.layer.Equals(16))
         {
             Physics2D.IgnoreLayerCollision(16, 15, false);
             Physics2D.IgnoreLayerCollision(16, 12, true);
             Physics2D.IgnoreLayerCollision(16, 13, true);
-            //Physics2D.IgnoreLayerCollision(16, 9, true);
         }
     }
 
