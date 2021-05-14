@@ -26,3 +26,7 @@ Background music for canyon level - https://www.youtube.com/watch?v=rsOakhtu6Yw
 # Development status
 
 The development of this project is complete.
+
+# Legal
+
+Ecclesia has being developed under a ‘Creative Commons Attribution-NonCommercial 4.0 International Public License’. As stated on the Creative Commons website, if you wish feel free to remix, adapt, and build upon this work non-commercially, as long as the original work is correctly creditted.
